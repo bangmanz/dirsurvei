@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="<?=base_url();?>">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Tambah Survei</a>
+                <a class="nav-item nav-link" href="<?=base_url();?>survei">Tambah Survei</a>
                 <a class="nav-item nav-link" href="#">About</a>
                 <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </div>
