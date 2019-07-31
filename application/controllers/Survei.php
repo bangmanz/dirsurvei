@@ -4,11 +4,9 @@
 class Survei extends CI_Controller{
     public function __construct()
     {
-
         parent::__construct();
         $this->load->model('Survei_model');
         $this->load->library('form_validation');
-        
     }
 
     public function index ()
@@ -19,7 +17,6 @@ class Survei extends CI_Controller{
         $this->load->view('templates/header',$data)  ;
         $this->load->view('survei/index',$data)  ;
         $this->load->view('templates/footer')  ;
-
     }
 
     public function tambah ()
@@ -30,7 +27,6 @@ class Survei extends CI_Controller{
         $this->form_validation->set_rules('singkatan','Singkatan', 'required');
         $this->form_validation->set_rules('tahun','Tahun', 'required|numeric');
              
-
         if($this->form_validation->run() == FALSE)
         {
             $this->load->view('templates/header',$data)  ;
@@ -41,6 +37,5 @@ class Survei extends CI_Controller{
             $this->session->set_flashdata(' ')
             redirect('survei');
         }
-
     }
 }
