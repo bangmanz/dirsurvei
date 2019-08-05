@@ -34,8 +34,14 @@ class Survei extends CI_Controller{
             $this->load->view('templates/footer')  ;
         } else {
             $this->Survei_model->tambahDataSurvei();
-            $this->session->set_flashdata(' ');
+            $this->session->set_flashdata('flash','Ditambahkan');
             redirect('survei');
         }
+    }
+
+    public function hapus($id)
+    {
+        $this-Survei_model->hapusDataSurvei($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
     }
 }
