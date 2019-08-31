@@ -22,5 +22,18 @@ class Survei_model extends CI_model {
         $this->db->insert('m_survei',$data);
     }
 
+    public function hapusDataSurvei($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('m_survei');
+
+    }
+
+    public function getSurveiById($id)
+    {
+       return $this->db->get_where('survei',['id' => $id])->row_array();
+
+    }
+
 
 }

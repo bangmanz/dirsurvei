@@ -35,8 +35,9 @@
                         <h5 class="card-title"><?=$srv['singkatan'] ;?></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><?=$srv['tahun']; ?></h6>
                         <p class="card-text"><?=$srv['nama']; ?></p>
-                        <a href="#" class="card-link">Detil.. </a>
-                        <a href="<?=base_url(); ?>mahasiswa/hapus/<?= $srv['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Apakah Anda yakin menghapus survei?');">Hapus </a>
+                        
+                        <a href="<?=base_url(); ?>survei/detail/<?= $srv['id']; ?>" class="badge badge-primary float-right">Detail </a>
+                        <a href="<?=base_url(); ?>survei/hapus/<?= $srv['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Apakah Anda yakin menghapus survei?');">Hapus </a>
                     </div>
                 </div>
             <?php endforeach; ?>

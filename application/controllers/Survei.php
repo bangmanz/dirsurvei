@@ -41,7 +41,18 @@ class Survei extends CI_Controller{
 
     public function hapus($id)
     {
-        $this-Survei_model->hapusDataSurvei($id);
+        $this->Survei_model->hapusDataSurvei($id);
         $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('survei');
+    }
+
+    public function detail($id)
+    {
+        $data['judul'] = 'Detail Data Survei';
+        $data['survei']= $this->Survei_model->getSurveiById($id);
+        $this->load->view('templates/header',$data)  ;
+        $this->load->view('survei/detail',$data)  ;
+        $this->load->view('templates/footer')  ;
+
     }
 }
