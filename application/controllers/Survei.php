@@ -38,4 +38,10 @@ class Survei extends CI_Controller{
             redirect('survei');
         }
     }
+
+    public function hapus($id)
+    {
+        $this-Survei_model->hapusDataSurvei($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
+    }
 }
