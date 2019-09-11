@@ -1,1 +1,0 @@
-CREATE TABLE `survei`.`m_survei` ( `id` INT NOT NULL AUTO_INCREMENT , `nama` VARCHAR(100) NOT NULL , `singkatan` VARCHAR(30) NOT NULL , `tahun` INT(4) NOT NULL , `bidang` VARCHAR(50) NOT NULL , `seksi` VARCHAR(50) NOT NULL , `pelaksana` VARCHAR(50) NOT NULL , `kuesioner` VARCHAR(200) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

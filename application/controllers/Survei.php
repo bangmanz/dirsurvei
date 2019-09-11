@@ -34,7 +34,7 @@ class Survei extends CI_Controller{
             $this->load->view('templates/footer')  ;
         } else {
             $this->Survei_model->tambahDataSurvei();
-            $this->session->set_flashdata(' ')
+            $this->session->set_flashdata(' ');
             redirect('survei');
         }
     }
