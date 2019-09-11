@@ -24,14 +24,14 @@ class Survei_model extends CI_model {
 
     public function hapusDataSurvei($id)
     {
-        $this->db->where('id', $id);
-        $this->db->delete('m_survei');
+        //$this->db->where('id', $id);
+        return $this->db->delete('m_survei', ['id'=> $id]);
 
     }
 
     public function getSurveiById($id)
     {
-       return $this->db->get_where('survei',['id' => $id])->row_array();
+       return $this->db->get_where('m_survei',['id' => $id])->row_array();
 
     }
 
